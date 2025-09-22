@@ -62,7 +62,14 @@
     <section id="receita ing">
         <div class ="coluna-esquerda">
             <div id="blocoreceita">
-                <a href="https://exemplo" class="botao">Digite a Receita</a>
+                <form action="cadastro.py" method="get" class="botao">
+                    <p>
+                        <label for="receita">Receita: </label>
+                        <input type="text" id="receita" required placeholder="Digite sua Receita">                         
+                        <input type="submit" value="Enviar" >
+                        <input type="reset" value="Limpar">
+                    </p>
+                </form>
                 <li>Exemplos de receitas</li>
                 <li>Exemplos de receitas</li>
                 <li>Exemplos de receitas</li>
@@ -85,7 +92,14 @@
 
     <section id="preparo">
         <h2 id="titulo-receita">Baião de Dois</h2>
-        <a href="" class="botao ing">Digite os Ingredientes</a>
+                <form action="cadastro.py" method="get" class="botao ing">
+                    <p>
+                        <label for="Ingredientes">Ingredientes:</label>
+                        <input type="text" id="Ingredientes" required placeholder="Digite seus Ingredientes"> 
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Limpar">
+                    </p>
+                </form>
         <div id="ingredientes">
             <h3>Ingredientes</h3>
             <ul>
