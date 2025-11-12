@@ -27,9 +27,3 @@ Quebrando o Gelo (E o Ovo) é um site com layout limpo e intuitivo, feito para a
 git clone https://github.com/seu-usuario/quebrando-o-gelo.git
 - Abra o arquivo index.html no navegador.
 - Pronto! Explore e descubra receitas com o que você tem em casa.
-
-📬 Contato
-- Rua xxxxxxxxxx
-- Tel: (12) 3456-7890
-- Email: xxxxxxxxxx@grandesite.com.br
-- Redes: Facebook • Instagram • YouTube • WhatsApp
