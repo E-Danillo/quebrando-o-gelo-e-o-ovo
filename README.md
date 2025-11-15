@@ -30,8 +30,7 @@ A proposta é simples: **menos complicação, mais comida boa**.
 
 ---
 
-## Como usar
+## Acesse:
 
-1. Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/quebrando-o-gelo.git
+1. Acesse:
+https://e-danillo.github.io/quebrando-o-gelo-e-o-ovo/
