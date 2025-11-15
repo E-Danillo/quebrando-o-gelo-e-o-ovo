@@ -32,5 +32,4 @@ A proposta é simples: **menos complicação, mais comida boa**.
 
 ## Acesse:
 
-1. Acesse:
 https://e-danillo.github.io/quebrando-o-gelo-e-o-ovo/
