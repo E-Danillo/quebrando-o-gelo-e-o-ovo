@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1');
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -18,6 +18,8 @@ html {
     
     --MarginUniversal: 10px;
     --PaddingUniversal: 20px;
+    --RadiusUniversal: 10px;
+    --RadiusPrincipal: 45px;
     
     --H1: 3rem;
     --H2: 1.8rem;
@@ -33,10 +35,10 @@ body {
 }
 
 header {
-    background: var(--AmareloSol) url('imagens/background.webp') center/cover no-repeat;
-    background-attachment: fixed;
     display: flex;
     flex-direction: column;
+    background: var(--AmareloSol) url('imagens/background.webp') center/cover no-repeat;
+    background-attachment: fixed;
     height: 100vh;
     justify-content: center;
     text-align: center;
@@ -55,17 +57,17 @@ header p {
     color: var(--AmareloSol);
 }
 
-#blocoinicial {
+#bloco-de-titulo {
     background-color: rgb(94, 61, 25); 
     backdrop-filter: blur(10px);               
     -webkit-backdrop-filter: blur(10px);       
-    border-radius:45px;                       
+    border-radius: var(--RadiusPrincipal);                       
     border: 1px solid rgb(94, 61, 25);  
     padding: var(--PaddingUniversal);
-    margin: 100% auto;
+    margin: var(--MarginUniversal) auto;
 }
 
-#blocoinicial img {
+#bloco-de-titulo img {
     position: absolute;
     top: 0;
     left: 50%;
@@ -96,26 +98,21 @@ section {
     margin: 10px;
 }
 
-.boas-vindas {
-    flex: 1;
-    text-align: justify;
-    max-width: 500px;
-    margin: var(--MarginUniversal);
+#apresentacao {
     color: var(--CinzaAnemico);
     background-color: var(--Capuccino);
+    text-align: justify;
+    max-width: 500px;
+    border-radius: var(--RadiusPrincipal);
+    margin: var(--MarginUniversal);
     padding: var(--PaddingUniversal); 
-    border-radius: 45px;
 }
 
 .coluna-esquerda {
     flex-basis: 50%;
-    text-align: center;
 }
 
 .coluna-direita {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
     flex-basis: 50%; 
 }
 
@@ -127,8 +124,7 @@ section {
 
 #contato {
     display: flex;
-    flex-wrap: wrap;     
-    height: 100vh;     
+    flex-wrap: wrap;       
     align-items: center;  
     padding: var(--PaddingUniversal);
     background-color: var(--Capuccino);
@@ -136,7 +132,8 @@ section {
 
 #contato img {
     width: 100%;
-    height: 400px;       
+    height: auto;
+    max-height: 400px;       
     object-fit: contain;  
 }
 
@@ -146,27 +143,37 @@ section {
     font-size: var(--H2);
 }
 
-#contato li, #contato a {
+#contato li{
+    color: var(--CinzaAnemico);
+}
+
+#contato a {
+    display: inline-block;
     color: var(--AmareloSol);
     text-decoration: none;
+    transition: color 300ms ease;
+    will-change: transform;
+}
+
+#contato a:hover {
+    color: var(--CinzaAnemico);
+    transform: scale(1.1);
 }
 
 #contato ul {
     list-style-type: none;
     text-align: center;
     padding-left: 0;
+    transition: transform 300ms ease;
 }
 
 .redes {
     display: flex;          
-    gap: 15px; 
+    gap: 20px;
     justify-content: center;
 }
 
 #menu {
-    width: 100vw;      
-    height: 100vh;  
-    display: flex;  
     background-color: var(--CafeExpresso);
 }
 
@@ -176,8 +183,13 @@ section {
     color: var(--AmareloSol);
 }
 
+#menu a:hover {
+    color: var(--CinzaAnemico);
+}
+
 #blocomenu {
     border: var(--CinzaAnemico) 3px solid;
+    border-radius: var(--RadiusPrincipal);
     padding: 40px;
 }
 
@@ -195,7 +207,7 @@ section {
 #blocoreceita {
     background-color: var(--CafeExpresso);
     color: var(--CinzaAnemico);
-    border-radius: 10px;
+    border-radius: var(--RadiusUniversal);
     list-style-type: none;
     max-width: 600px;
     padding: 10px;
@@ -215,7 +227,7 @@ section {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: var(--RadiusUniversal);
     display: block;
 }
 
@@ -225,7 +237,7 @@ section {
     background-color: var(--CinzaAnemico);
     text-decoration: none;
     padding: var(--PaddingUniversal);
-    border-radius: 10px;
+    border-radius: var(--RadiusUniversal);
     border: var(--CafeExpresso) 3px solid;
     transition: background-color 0.3s ease;
 }
@@ -262,7 +274,7 @@ section {
     color: var(--CinzaAnemico);
     padding: 20px;
     border: 3px solid;
-    border-radius: 10px;
+    border-radius: var(--RadiusUniversal);
     width: 90%;
     margin: 0 auto;
     box-sizing: border-box;
@@ -273,14 +285,22 @@ section {
     border: 3px solid var(--CinzaAnemico);
     margin-bottom: 20px; 
     padding-left: 30px;
-    border-radius: 10px;
+    border-radius: var(--RadiusUniversal);
 }
 
 @media (max-width: 768px) {
     section {
         flex-direction: column;
-        height: auto; 
+        height: auto;
         padding: 20px; 
+    }
+
+    #bloco-de-titulo {
+        margin: var(--MarginUniversal);
+    }
+
+    #menu {
+        height: 100vh;
     }
 
     header {
