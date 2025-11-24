@@ -13,10 +13,11 @@ html {
 :root {
     --AmareloSol: #d1d119;
     --CafeExpresso: #26120B;
-    --Capuccino: rgb(94, 61, 25);
+    --Capuccino: #5E3D19;
     --CinzaAnemico: #EDEDED;
     
-    --EspaçamentoTexto: 10px;
+    --MarginUniversal: 10px;
+    --PaddingUniversal: 20px;
     
     --H1: 3rem;
     --H2: 1.8rem;
@@ -45,23 +46,23 @@ header h1 {
     font-size: var(--H1);
     text-transform: uppercase;
     color: var(--CinzaAnemico);
-    margin: var(--EspaçamentoTexto);
+    margin: var(--MarginUniversal);
 }
 
 header p {
     font-size: var(--p);
-    margin: var(--EspaçamentoTexto);
+    margin: var(--MarginUniversal);
     color: var(--AmareloSol);
 }
 
 #blocoinicial {
     background-color: rgb(94, 61, 25); 
-    backdrop-filter: blur(5px);               
+    backdrop-filter: blur(10px);               
     -webkit-backdrop-filter: blur(10px);       
     border-radius:45px;                       
     border: 1px solid rgb(94, 61, 25);  
-    padding: 20px;
-    margin: 30%;
+    padding: var(--PaddingUniversal);
+    margin: 100% auto;
 }
 
 #blocoinicial img {
@@ -98,8 +99,12 @@ section {
 .boas-vindas {
     flex: 1;
     text-align: justify;
-    max-width: 400px;
-    margin: var(--EspaçamentoTexto);
+    max-width: 500px;
+    margin: var(--MarginUniversal);
+    color: var(--CinzaAnemico);
+    background-color: var(--Capuccino);
+    padding: var(--PaddingUniversal); 
+    border-radius: 45px;
 }
 
 .coluna-esquerda {
@@ -125,7 +130,7 @@ section {
     flex-wrap: wrap;     
     height: 100vh;     
     align-items: center;  
-    padding: 40px 20px;
+    padding: var(--PaddingUniversal);
     background-color: var(--Capuccino);
 }
 
@@ -137,7 +142,7 @@ section {
 
 #contato h2 {
     color: var(--AmareloSol);
-    margin: var(--EspaçamentoTexto);
+    margin: var(--MarginUniversal);
     font-size: var(--H2);
 }
 
@@ -183,7 +188,7 @@ section {
 #receita {
     align-items: center;
     background-color: var(--AmareloSol);
-    margin: var(--EspaçamentoTexto);
+    margin: var(--MarginUniversal);
     position: relative;
 }
 
@@ -200,8 +205,7 @@ section {
 
 .galeria {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     max-width: 600px;
     margin: 20px;       
@@ -217,10 +221,10 @@ section {
 
 .botao {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--CinzaAnemico);
     color: var(--CafeExpresso);
+    background-color: var(--CinzaAnemico);
     text-decoration: none;
+    padding: var(--PaddingUniversal);
     border-radius: 10px;
     border: var(--CafeExpresso) 3px solid;
     transition: background-color 0.3s ease;
@@ -313,7 +317,7 @@ section {
         position: static;
         font-size: var(--H2);
         text-align: center;
-        margin-bottom: var(--EspaçamentoTexto);
+        margin-bottom: var(--MarginUniversal);
     }
 
     #titulo-receita, .ing {
@@ -326,12 +330,12 @@ section {
         position: static;
         font-size: var(--H2);
         text-align: center;
-        margin-bottom: var(--EspaçamentoTexto);
+        margin-bottom: var(--MarginUniversal);
     }
 
     #mododepreparo {
         position: static;
         border: var(--CinzaAnemico) 3px solid;
-        margin-top: var(--EspaçamentoTexto);
+        margin-top: var(--MarginUniversal);
     }
 }
