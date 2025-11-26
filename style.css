@@ -197,7 +197,12 @@ section {
     max-width: 100%
 }
 
+<<<<<<< HEAD
 #receita {
+=======
+#receitas {
+    background-color: var(--Capuccino);
+>>>>>>> b99e94a99942ef7c7e96494de17922232dff4626
     align-items: center;
     background-color: var(--AmareloSol);
     margin: var(--MarginUniversal);
@@ -284,6 +289,7 @@ section {
     transition: background-color 0.3s ease;
 }
 
+<<<<<<< HEAD
 .botao:hover {
     background-color: var(--AmareloSol);
     color: var(--CafeExpresso);
@@ -303,22 +309,41 @@ section {
 }
 
 /* CORREÇÃO PRINCIPAL: GARANTIR QUE O FUNDO SE EXPANDA */
+=======
+/* Seção de Preparo */
+#titulo-receita {
+    background-color: var(--CinzaAnemico);
+    color: var(--Capuccino);
+    padding: var(--PaddingUniversal);
+    border-radius: var(--RadiusUniversal);
+    position: absolute;
+    top: 10px;
+    right: 20px; 
+    font-size: var(--H2);
+    z-index: 10;
+}
+
+>>>>>>> b99e94a99942ef7c7e96494de17922232dff4626
 #preparo {
     background-color: var(--CafeExpresso);
     color: var(--CinzaAnemico);
+<<<<<<< HEAD
     
     /* AUMENTADO: Padding robusto para dar espaço nas bordas, resolvendo o transbordamento */
     padding: 40px; 
     
     border: 3px solid;
+=======
+    padding: var(--PaddingUniversal);
+>>>>>>> b99e94a99942ef7c7e96494de17922232dff4626
     border-radius: var(--RadiusUniversal);
     width: 90%;
     margin: 0 auto;
-    box-sizing: border-box;
 }
 
 /* ESTILOS PARA BLOCOS DE INGREDIENTES E MODO DE PREPARO */
 #ingredientes, #mododepreparo {
+<<<<<<< HEAD
     box-sizing: border-box; 
     padding: 20px; 
     border: 3px solid var(--CinzaAnemico);
@@ -360,6 +385,11 @@ section {
     height: auto; 
     display: block;
     margin-bottom: 20px; 
+=======
+    background-color: var(--Capuccino);
+    padding: var(--PaddingUniversal);
+    padding-left: 30px;
+>>>>>>> b99e94a99942ef7c7e96494de17922232dff4626
     border-radius: var(--RadiusUniversal);
 }
 
@@ -439,6 +469,7 @@ section {
     #bem-vindo img {
         margin: var(--MarginUniversal) auto;
     }
+
     header {
         background-attachment: scroll;
     }
@@ -474,7 +505,6 @@ section {
     }
 
     #blocoreceita {
-        position: static;
         font-size: var(--H2);
         text-align: center;
         margin-bottom: var(--MarginUniversal);
@@ -483,9 +513,13 @@ section {
     }
 
     #titulo-receita {
+<<<<<<< HEAD
         position: relative;
+=======
+        position: static;
+        margin-bottom: var(--MarginUniversal);
+>>>>>>> b99e94a99942ef7c7e96494de17922232dff4626
         text-align: center;
-        margin-bottom: 10px;
     }
 
     .ing {
@@ -496,8 +530,6 @@ section {
     }
 
     #mododepreparo {
-        position: static;
-        border: var(--CinzaAnemico) 3px solid;
         margin-top: var(--MarginUniversal);
     }
 }

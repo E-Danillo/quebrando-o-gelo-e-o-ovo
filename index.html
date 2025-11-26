@@ -4,11 +4,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
     <title>Quebrando o Gelo (E o ovo)</title>
 </head>
 
 <body>
-    <header>
+    <header id="pagina-inicial">
         <div id="bloco-de-titulo">
             <img src="imagens/ovo.png" alt="ovo" class="ovo">
             <h1>Quebrando o Gelo <br><span class="destaque">(E o ovo)</span></h1>
@@ -50,28 +54,41 @@
     </section>
 
     <section id="menu">
-        <div id="blocomenu">
-            <ol>
-                <li><a href="#paginainicial">Página Inicial</a></li>
+        <nav id="blocomenu">
+            <ul>
+                <li><a href="#pagina-inicial">Página Inicial</a></li>
                 <li><a href="#bem-vindo">Apresentação</a></li>
                 <li><a href="#contato">Contato</a></li>
+<<<<<<< HEAD
                 <li><a href="#busca-receita">Buscar por Receitas</a></li>
+=======
+                <li><a href="#receita">Buscar por Receitas</a></li>
+>>>>>>> b99e94a99942ef7c7e96494de17922232dff4626
                 <li><a href="#preparo">Buscar por Ingredientes</a></li>
-            </ol>
-        </div>
+            </ul>
+        </nav>
     </section>
 
+<<<<<<< HEAD
     <section id="busca-receita">
+=======
+    <section id="receitas">
+>>>>>>> b99e94a99942ef7c7e96494de17922232dff4626
         <div class ="coluna-esquerda">
             <div id="blocoreceita">
                 <form method="get" class="botao">
                     <p>
                         <label for="receita">Receita: </label>
+<<<<<<< HEAD
                         <input type="text" id="receita" required placeholder="Digite sua Receita">                         
+=======
+                        <input id="receita" type="text" required placeholder="Digite sua Receita">                         
+>>>>>>> b99e94a99942ef7c7e96494de17922232dff4626
                         <input type="submit" value="Enviar" >
                         <input type="reset" value="Limpar">
                     </p>
                 </form>
+<<<<<<< HEAD
                 <div id="blocoreceita">
                     <form method="get" class="botao"> 
                         <p>
@@ -83,19 +100,29 @@
                     </form>
                     <p style="text-align: center; color: var(--AmareloSol); font-size: 1rem;">Use a busca acima para encontrar a receita perfeita!</p>
                 </div>
+=======
+                <ul>
+                    <li>Exemplos de receitas</li>
+                    <li>Exemplos de receitas</li>
+                    <li>Exemplos de receitas</li>
+                    <li>Exemplos de receitas</li>
+                    <li>Exemplos de receitas</li>
+                </ul>
+>>>>>>> b99e94a99942ef7c7e96494de17922232dff4626
             </div>    
         </div>
         <div class="coluna-direita">
             <div class="galeria">
-                <img src="imagens/exemplo1.jpg" alt="">
-                <img src="imagens/exemplo2.jpg" alt="">
-                <img src="imagens/exemplo3.jpg" alt="">
-                <img src="imagens/exemplo4.jpg" alt="">
+                <img src="imagens/exemplo1.jpg" alt="Exemplo 1">
+                <img src="imagens/exemplo2.jpg" alt="Exemplo 2">
+                <img src="imagens/exemplo3.jpg" alt="Exemplo 3">
+                <img src="imagens/exemplo4.jpg" alt="Exemplo 4">
             </div>
         </div>
     </section>
 
     <section id="preparo">
+<<<<<<< HEAD
         <h2 id="titulo-receita">Baião de Dois</h2>
                 <form method="get" class="botao ing">
                     <p>
@@ -105,6 +132,19 @@
                         <input type="reset" value="Limpar">
                     </p>
                 </form>
+=======
+        <div id="cabecalho-ingredientes">
+            <h2 id="titulo-receita">Baião de Dois</h2>
+            <form action="cadastro.py" method="get" class="label ing">
+                <p>
+                    <label for="Ingredientes">Ingredientes:</label>
+                    <input type="text" id="Ingredientes" required placeholder="Digite seus Ingredientes">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </p>
+            </form>
+        </div>
+>>>>>>> b99e94a99942ef7c7e96494de17922232dff4626
         <div id="ingredientes">
             <h3>Ingredientes</h3>
             <ul>
