@@ -28,6 +28,10 @@ A proposta é simples: **menos complicação, mais comida boa**.
 - CSS
 - JavaScript
 
+## API Utilizada
+
+- https://www.themealdb.com/api/json/v1/1/
+
 ---
 
 ## Acesse:
