@@ -252,6 +252,7 @@ list-style-type: none;
     transition: background-color 0.3s ease;
 }
 
+/* Seção de Preparo */
 #titulo-receita {
     background-color: var(--CinzaAnemico);
     color: var(--Capuccino);
@@ -264,21 +265,17 @@ list-style-type: none;
     z-index: 10;
 }
 
-
 #preparo {
     position: relative;
     color: var(--CinzaAnemico);
-    padding: 20px;
+    padding: var(--PaddingUniversal);
     border-radius: var(--RadiusUniversal);
     margin: 0 auto;
-    box-sizing: border-box;
 }
 
 #ingredientes, #mododepreparo {
     background-color: var(--Capuccino);
-    padding: 10px;
-    border: 3px solid var(--CinzaAnemico);
-    margin-bottom: 20px; 
+    padding: var(--PaddingUniversal);
     padding-left: 30px;
     border-radius: var(--RadiusUniversal);
 }
@@ -301,6 +298,7 @@ list-style-type: none;
     #bem-vindo img {
         margin: var(--MarginUniversal) auto;
     }
+
     header {
         background-attachment: scroll;
     }
@@ -318,7 +316,7 @@ list-style-type: none;
     #contato img {
         max-width: 80%;       
         margin: 0 auto;     
-} 
+    } 
 
     #preparo {
         padding: 10px;
@@ -332,16 +330,15 @@ list-style-type: none;
     }
 
     #blocoreceita {
-        position: static;
         font-size: var(--H2);
         text-align: center;
         margin-bottom: var(--MarginUniversal);
     }
 
-    #titulo-receita, .ing {
-        position: relative;
+    #titulo-receita {
+        position: static;
+        margin-bottom: var(--MarginUniversal);
         text-align: center;
-        margin-bottom: 10px;
     }
 
     .ing {
@@ -352,8 +349,6 @@ list-style-type: none;
     }
 
     #mododepreparo {
-        position: static;
-        border: var(--CinzaAnemico) 3px solid;
         margin-top: var(--MarginUniversal);
     }
 }
