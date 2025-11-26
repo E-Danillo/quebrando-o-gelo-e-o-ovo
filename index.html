@@ -55,33 +55,34 @@
                 <li><a href="#paginainicial">Página Inicial</a></li>
                 <li><a href="#bem-vindo">Apresentação</a></li>
                 <li><a href="#contato">Contato</a></li>
-                <li><a href="#receita ing">Buscar por Receitas</a></li>
+                <li><a href="#busca-receita">Buscar por Receitas</a></li>
                 <li><a href="#preparo">Buscar por Ingredientes</a></li>
             </ol>
         </div>
     </section>
 
-    <section id="receita">
+    <section id="busca-receita">
         <div class ="coluna-esquerda">
             <div id="blocoreceita">
-                <form action="cadastro.py" method="get" class="label">
+                <form method="get" class="botao">
                     <p>
                         <label for="receita">Receita: </label>
-                        <input type="text" required placeholder="Digite sua Receita">                         
+                        <input type="text" id="receita" required placeholder="Digite sua Receita">                         
                         <input type="submit" value="Enviar" >
                         <input type="reset" value="Limpar">
                     </p>
                 </form>
-                <ul>
-                    <li>Exemplos de receitas</li>
-                    <li>Exemplos de receitas</li>
-                    <li>Exemplos de receitas</li>
-                    <li>Exemplos de receitas</li>
-                    <li>Exemplos de receitas</li>
-                    <li>Exemplos de receitas</li>
-                    <li>Exemplos de receitas</li>
-                    <li>Exemplos de receitas</li>
-                </ul>
+                <div id="blocoreceita">
+                    <form method="get" class="botao"> 
+                        <p>
+                            <label for="receita">Receita: </label>
+                            <input type="text" id="receita" required placeholder="Digite sua Receita">                         
+                            <input type="submit" value="Enviar" >
+                            <input type="reset" value="Limpar">
+                        </p>
+                    </form>
+                    <p style="text-align: center; color: var(--AmareloSol); font-size: 1rem;">Use a busca acima para encontrar a receita perfeita!</p>
+                </div>
             </div>    
         </div>
         <div class="coluna-direita">
@@ -96,7 +97,7 @@
 
     <section id="preparo">
         <h2 id="titulo-receita">Baião de Dois</h2>
-                <form action="cadastro.py" method="get" class="label ing">
+                <form method="get" class="botao ing">
                     <p>
                         <label for="Ingredientes">Ingredientes:</label>
                         <input type="text" id="Ingredientes" required placeholder="Digite seus Ingredientes"> 
@@ -134,5 +135,6 @@
             </ol>
         </div>
     </section>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -12,6 +12,7 @@ html {
 
 :root {
     --AmareloSol: #d1d119;
+    --CafeExpresso: #26120B;
     --Capuccino: #5E3D19;
     --CinzaAnemico: #EDEDED;
     
@@ -57,11 +58,9 @@ header p {
 }
 
 #bloco-de-titulo {
-    background-color: var(--Capuccino); 
-    backdrop-filter: blur(10px);               
-    -webkit-backdrop-filter: blur(10px);       
-    border-radius: var(--RadiusPrincipal);                       
-    border: 1px solid var(--Capuccino);  
+    background-color: var(--Capuccino);       
+    border-radius: var(--RadiusPrincipal);             
+    border: 1px solid var(--Capuccino);    
     padding: var(--PaddingUniversal);
     margin: var(--MarginUniversal) auto;
 }
@@ -83,7 +82,7 @@ section {
     display: flex;
     justify-content: center; 
     align-items: center; 
-    width: 100%;      
+    width: 100%;       
     height: 100vh; 
     gap: 5%; 
 }
@@ -95,7 +94,7 @@ section {
 #bem-vindo img {
     width: 100%;
     height: auto;
-    max-height: 400px;       
+    max-height: 400px;        
     object-fit: contain;  
     margin: var(--MarginUniversal);
 }
@@ -120,7 +119,7 @@ section {
 
 #contato .coluna-esquerda,
 #contato .coluna-direita {
-    flex-basis: 45%;       
+    flex-basis: 45%;          
     text-align: center;
 }
 
@@ -134,7 +133,7 @@ section {
 #contato img {
     width: 100%;
     height: auto;
-    max-height: 400px;       
+    max-height: 400px;        
     object-fit: contain;  
 }
 
@@ -169,13 +168,13 @@ section {
 }
 
 .redes {
-    display: flex;          
+    display: flex;            
     gap: 20px;
     justify-content: center;
 }
 
 #menu {
-    background-color: var(--AmareloSol);
+    background-color: var(--CafeExpresso);
 }
 
 #menu ol, #menu li, #menu a {
@@ -189,7 +188,7 @@ section {
 }
 
 #blocomenu {
-    background-color: var(--Capuccino);
+    border: var(--CinzaAnemico) 3px solid;
     border-radius: var(--RadiusPrincipal);
     padding: 40px;
 }
@@ -199,31 +198,63 @@ section {
 }
 
 #receita {
-    background-color: var(--Capuccino);
     align-items: center;
+    background-color: var(--AmareloSol);
+    margin: var(--MarginUniversal);
     position: relative;
 }
 
-.ing {
-    position: absolute;
-    top: 10px;
-    left: 20px; 
-    z-index: 10;
-}
-
-#receita ul {
-list-style-type: none;
-}
-
-#blocoreceita {    
+#blocoreceita {
+    background-color: var(--CafeExpresso);
     color: var(--CinzaAnemico);
     border-radius: var(--RadiusUniversal);
-    list-style-type: none;
+    list-style-type: none; 
     max-width: 600px;
+    
+    /* Padrão de rolagem */
     padding: 10px;
     margin: auto;
     box-sizing: border-box;
+    text-align: left;
+    max-height: 400px; 
+    overflow-y: auto;  
+    padding-right: 20px;
+}
+
+#blocoreceita h3 {
     text-align: center;
+    color: var(--AmareloSol); 
+    margin-bottom: var(--PaddingUniversal);
+    font-size: var(--H2);
+}
+
+#blocoreceita ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#blocoreceita li {
+    background-color: var(--Capuccino); 
+    margin-bottom: 8px;
+    padding: 10px 15px;
+    border-radius: var(--RadiusUniversal);
+    transition: background-color 0.2s ease;
+}
+
+#blocoreceita li:hover {
+    background-color: var(--AmareloSol); 
+}
+
+#blocoreceita li a {
+    text-decoration: none;
+    color: var(--CinzaAnemico); 
+    display: block;
+    transition: color 0.2s ease;
+}
+
+#blocoreceita li:hover a {
+    color: var(--CafeExpresso); 
+    font-weight: bold;
 }
 
 .galeria {
@@ -242,46 +273,153 @@ list-style-type: none;
     display: block;
 }
 
-.label {
+.botao {
     display: inline-block;
-    color: var(--Capuccino);
+    color: var(--CafeExpresso);
     background-color: var(--CinzaAnemico);
     text-decoration: none;
     padding: var(--PaddingUniversal);
     border-radius: var(--RadiusUniversal);
+    border: var(--CafeExpresso) 3px solid;
     transition: background-color 0.3s ease;
 }
 
-#titulo-receita {
-    background-color: var(--CinzaAnemico);
-    color: var(--Capuccino);
-    padding: var(--PaddingUniversal);
-    border-radius: var(--RadiusUniversal);
-    position: absolute;
-    top: 10px;
-    right: 20px; 
-    font-size: var(--H2);
-    z-index: 10;
+.botao:hover {
+    background-color: var(--AmareloSol);
+    color: var(--CafeExpresso);
 }
 
+.botao.ing:hover {
+    background-color: var(--AmareloSol); 
+    color: var(--CafeExpresso);
+}
 
+/* Título de Receita (Corrigido) */
+#titulo-receita {
+    color: var(--AmareloSol); 
+    font-size: var(--H2);
+    text-align: center; 
+    margin-bottom: 30px;
+}
+
+/* CORREÇÃO PRINCIPAL: GARANTIR QUE O FUNDO SE EXPANDA */
 #preparo {
-    position: relative;
+    background-color: var(--CafeExpresso);
     color: var(--CinzaAnemico);
-    padding: 20px;
+    
+    /* AUMENTADO: Padding robusto para dar espaço nas bordas, resolvendo o transbordamento */
+    padding: 40px; 
+    
+    border: 3px solid;
     border-radius: var(--RadiusUniversal);
+    width: 90%;
     margin: 0 auto;
     box-sizing: border-box;
 }
 
+/* ESTILOS PARA BLOCOS DE INGREDIENTES E MODO DE PREPARO */
 #ingredientes, #mododepreparo {
-    background-color: var(--Capuccino);
-    padding: 10px;
+    box-sizing: border-box; 
+    padding: 20px; 
     border: 3px solid var(--CinzaAnemico);
+    
+    /* AUMENTADO: Margem inferior grande no último bloco para empurrar o fundo do #preparo */
+    margin-bottom: 40px; 
+    
+    border-radius: var(--RadiusUniversal);
+    
+    /* ESSENCIAL: Adiciona espaço para os marcadores de lista não serem cortados */
+    padding-left: 50px; 
+}
+
+/* Estilização dos títulos internos dos detalhes */
+#ingredientes h3, #mododepreparo h3 {
+    color: var(--AmareloSol);
+    font-size: var(--H2);
+    border-bottom: 2px solid var(--AmareloSol); /* Linha sutil para separar */
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Estilos para garantir que listas UL/OL respeitem o espaçamento */
+#ingredientes ul, #mododepreparo ol {
+    /* Removido o background: Capuccino dos <li> para simplificar e melhorar o design */
+    list-style-type: disc; /* Usar bolinha para ingrediente */
+    list-style-position: outside;
+    padding-left: 0;
+    margin: 10px 0;
+}
+
+#mododepreparo ol {
+    list-style-type: decimal; /* Usar números para modo de preparo */
+}
+
+/* Garante que a imagem se ajuste ao contêiner de detalhes */
+#detalhe-receita img {
+    max-width: 100%;
+    height: auto; 
+    display: block;
     margin-bottom: 20px; 
-    padding-left: 30px;
     border-radius: var(--RadiusUniversal);
 }
+
+
+/* --- ESTILOS PARA INTEGRAÇÃO DA API --- */
+
+/* Container da Lista de Receitas por Ingrediente */
+#lista-ingrediente {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* Card Individual de Receita (Busca por Ingrediente) */
+.card-ingrediente {
+    width: 200px; 
+    background-color: var(--Capuccino);
+    color: var(--CinzaAnemico);
+    border-radius: var(--RadiusUniversal);
+    overflow: hidden; 
+    text-align: center;
+    box-shadow: 4px 4px 0px var(--AmareloSol); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card-ingrediente:hover {
+    transform: translateY(-5px); 
+    box-shadow: 6px 6px 0px var(--AmareloSol);
+}
+
+.card-ingrediente img {
+    width: 100%;
+    height: 150px; 
+    object-fit: cover; 
+    display: block;
+}
+
+.card-ingrediente h4 {
+    font-size: 1.2rem;
+    padding: 10px;
+    margin: 0;
+    line-height: 1.2;
+    min-height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ajuste do Título da Seção 'preparo' após a busca */
+#preparo h2 {
+    text-align: center;
+    color: var(--AmareloSol);
+    font-size: var(--H1);
+    margin-bottom: 20px;
+}
+
 
 @media (max-width: 768px) {
     section {
@@ -318,10 +456,14 @@ list-style-type: none;
     #contato img {
         max-width: 80%;       
         margin: 0 auto;     
-} 
+    } 
 
     #preparo {
-        padding: 10px;
+        padding: 20px; 
+    }
+    
+    #ingredientes, #mododepreparo {
+        margin-bottom: 20px; /* Reduz a margem no mobile */
     }
 
     #receita {
@@ -336,9 +478,11 @@ list-style-type: none;
         font-size: var(--H2);
         text-align: center;
         margin-bottom: var(--MarginUniversal);
+        max-height: none; 
+        overflow-y: visible; 
     }
 
-    #titulo-receita, .ing {
+    #titulo-receita {
         position: relative;
         text-align: center;
         margin-bottom: 10px;
