@@ -12,7 +12,6 @@ html {
 
 :root {
     --AmareloSol: #d1d119;
-    --CafeExpresso: #26120B;
     --Capuccino: #5E3D19;
     --CinzaAnemico: #EDEDED;
     
@@ -58,7 +57,9 @@ header p {
 }
 
 #bloco-de-titulo {
-    background-color: var(--Capuccino);      
+    background-color: var(--Capuccino); 
+    backdrop-filter: blur(10px);               
+    -webkit-backdrop-filter: blur(10px);       
     border-radius: var(--RadiusPrincipal);                       
     border: 1px solid var(--Capuccino);  
     padding: var(--PaddingUniversal);
@@ -174,7 +175,7 @@ section {
 }
 
 #menu {
-    background-color: var(--CafeExpresso);
+    background-color: var(--AmareloSol);
 }
 
 #menu ol, #menu li, #menu a {
@@ -188,7 +189,7 @@ section {
 }
 
 #blocomenu {
-    border: var(--CinzaAnemico) 3px solid;
+    background-color: var(--Capuccino);
     border-radius: var(--RadiusPrincipal);
     padding: 40px;
 }
@@ -198,14 +199,23 @@ section {
 }
 
 #receita {
+    background-color: var(--Capuccino);
     align-items: center;
-    background-color: var(--AmareloSol);
-    margin: var(--MarginUniversal);
     position: relative;
 }
 
-#blocoreceita {
-    background-color: var(--CafeExpresso);
+.ing {
+    position: absolute;
+    top: 10px;
+    left: 20px; 
+    z-index: 10;
+}
+
+#receita ul {
+list-style-type: none;
+}
+
+#blocoreceita {    
     color: var(--CinzaAnemico);
     border-radius: var(--RadiusUniversal);
     list-style-type: none;
@@ -213,6 +223,7 @@ section {
     padding: 10px;
     margin: auto;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .galeria {
@@ -231,29 +242,21 @@ section {
     display: block;
 }
 
-.botao {
+.label {
     display: inline-block;
-    color: var(--CafeExpresso);
+    color: var(--Capuccino);
     background-color: var(--CinzaAnemico);
     text-decoration: none;
     padding: var(--PaddingUniversal);
     border-radius: var(--RadiusUniversal);
-    border: var(--CafeExpresso) 3px solid;
     transition: background-color 0.3s ease;
 }
 
-.botao:hover {
-    background-color: var(--AmareloSol);
-    color: var(--CafeExpresso);
-}
-
-.botao.ing:hover {
-    background-color: var(--AmareloSol); 
-    color: var(--CafeExpresso);
-}
-
 #titulo-receita {
-    color: var(--CinzaAnemico);
+    background-color: var(--CinzaAnemico);
+    color: var(--Capuccino);
+    padding: var(--PaddingUniversal);
+    border-radius: var(--RadiusUniversal);
     position: absolute;
     top: 10px;
     right: 20px; 
@@ -261,26 +264,18 @@ section {
     z-index: 10;
 }
 
-.ing {
-    position: absolute;
-    top: 10px;
-    left: 20px; 
-    z-index: 10;
-}
 
 #preparo {
     position: relative;
-    background-color: var(--CafeExpresso);
     color: var(--CinzaAnemico);
     padding: 20px;
-    border: 3px solid;
     border-radius: var(--RadiusUniversal);
-    width: 90%;
     margin: 0 auto;
     box-sizing: border-box;
 }
 
 #ingredientes, #mododepreparo {
+    background-color: var(--Capuccino);
     padding: 10px;
     border: 3px solid var(--CinzaAnemico);
     margin-bottom: 20px; 
