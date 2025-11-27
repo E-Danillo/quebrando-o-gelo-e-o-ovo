@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1');
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap');
 
 * {
     margin: 0;
@@ -12,12 +12,14 @@ html {
 
 :root {
     --AmareloSol: #d1d119;
-    --CafeExpresso: #26120B;
     --Capuccino: #5E3D19;
     --CinzaAnemico: #EDEDED;
     
+    --BordaClara: 3px solid var(--CinzaAnemico);
+    --BordaEscura: 3px solid var(--Capuccino);
+
     --MarginUniversal: 10px;
-    --PaddingUniversal: 20px;
+    --PaddingUniversal: 30px;
     --RadiusUniversal: 10px;
     --RadiusPrincipal: 45px;
     
@@ -32,7 +34,6 @@ body {
     line-height: 1.5;
     font-family: 'Chau Philomene One', Arial, Helvetica, sans-serif;
     font-size: var(--p);
-    padding-top: 70px;
 }
 
 header {
@@ -59,16 +60,17 @@ header p {
 }
 
 #bloco-de-titulo {
+    position: relative;
     background-color: var(--Capuccino);       
-    border-radius: var(--RadiusPrincipal);             
-    border: 1px solid var(--Capuccino);    
+    border-radius: var(--RadiusPrincipal);                 
     padding: var(--PaddingUniversal);
+    border: var(--BordaEscura); 
     margin: var(--MarginUniversal) auto;
 }
 
 #bloco-de-titulo img {
     position: absolute;
-    top: 0;
+    top: 1%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100px;
@@ -86,6 +88,11 @@ section {
     width: 100%;       
     height: 100vh; 
     gap: 5%; 
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 #bem-vindo {
@@ -110,6 +117,10 @@ section {
     padding: var(--PaddingUniversal); 
 }
 
+#apresentacao h2 {
+    margin-bottom: var(--MarginUniversal);
+}
+
 .coluna-esquerda {
     flex-basis: 50%;
 }
@@ -118,6 +129,7 @@ section {
     flex-basis: 50%; 
 }
 
+/* Estilos para a seção de Contato */
 #contato .coluna-esquerda,
 #contato .coluna-direita {
     flex-basis: 45%;          
@@ -164,8 +176,6 @@ section {
 #contato ul {
     list-style-type: none;
     text-align: center;
-    padding-left: 0;
-    transition: transform 300ms ease;
 }
 
 .redes {
@@ -186,58 +196,41 @@ section {
     height: auto;
 }
 
-#blocomenu {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+nav {
+    max-width: 1000px;
+    margin: 0 auto; 
+    padding: var(--PaddingUniversal);
+    border: var(--BordaClara);
+    border-radius: var(--RadiusPrincipal);
+    background-color: var(--Capuccino);
 }
 
-#blocomenu ol {
+nav ol {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     flex-wrap: wrap;
-}
-
-#blocomenu li {
+    gap: 70px;
     list-style-type: none;
 }
 
 #menu a {
     text-decoration: none;
     color: var(--AmareloSol);
-    font-size: 1.1rem;
     transition: color 0.3s ease;
     white-space: nowrap;
+    font-size: 1rem; 
+    letter-spacing: .5px;
+    line-height: 1.5;
+    font-weight: 400;
 }
 
 #menu a:hover {
     color: var(--CinzaAnemico);
 }
 
-#blocomenu {
-    border: var(--CinzaAnemico) 3px solid;
-    border-radius: var(--RadiusPrincipal);
-    padding: 40px;
-}
-
-#receita img {
-    max-width: 100%
-}
-
-#receita {
-    align-items: center;
-    background-color: var(--AmareloSol);
-    margin: var(--MarginUniversal);
-    position: relative;
-}
-
 #blocoreceita {
-    background-color: var(--CafeExpresso);
+    background-color: var(--Capuccino);
     color: var(--CinzaAnemico);
     border-radius: var(--RadiusUniversal);
     list-style-type: none; 
@@ -246,11 +239,9 @@ section {
     /* Padrão de rolagem */
     padding: 10px;
     margin: auto;
-    box-sizing: border-box;
-    text-align: left;
+    text-align: center;
     max-height: 400px; 
     overflow-y: auto;  
-    padding-right: 20px;
 }
 
 #blocoreceita h3 {
@@ -260,16 +251,11 @@ section {
     font-size: var(--H2);
 }
 
-#blocoreceita ul {
-    list-style-type: none;
-    padding: 0;
-}
-
 #blocoreceita li {
-    background-color: var(--Capuccino); 
     margin-bottom: 8px;
     padding: 10px 15px;
     border-radius: var(--RadiusUniversal);
+    border: var(--BordaClara);
     transition: background-color 0.2s ease;
 }
 
@@ -285,7 +271,7 @@ section {
 }
 
 #blocoreceita li:hover a {
-    color: var(--CafeExpresso); 
+    color: var(--Capuccino); 
     font-weight: bold;
 }
 
@@ -302,31 +288,26 @@ section {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: var(--RadiusUniversal);
-    display: block;
+    border: var(--BordaClara);
 }
 
-.botao {
-    display: inline-block;
-    color: var(--CafeExpresso);
-    background-color: var(--CinzaAnemico);
-    text-decoration: none;
-    padding: var(--PaddingUniversal);
-    border-radius: var(--RadiusUniversal);
-    border: var(--CafeExpresso) 3px solid;
-    transition: background-color 0.3s ease;
+input, textarea {
+    background-color: rgb(252, 228, 174);
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #5E3D19;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
 }
 
-.botao:hover {
-    background-color: var(--AmareloSol);
-    color: var(--CafeExpresso);
+input::placeholder,
+textarea::placeholder {
+    font-size: 19px;      
+    opacity: 1;           
 }
 
-.botao.ing:hover {
-    background-color: var(--AmareloSol); 
-    color: var(--CafeExpresso);
-}
-
-/* Título de Receita (Corrigido) */
 #titulo-receita {
     color: var(--AmareloSol); 
     font-size: var(--H2);
@@ -334,99 +315,71 @@ section {
     margin-bottom: 30px;
 }
 
-/* CORREÇÃO PRINCIPAL: GARANTIR QUE O FUNDO SE EXPANDA */
 #preparo {
-    background-color: var(--CafeExpresso);
+    background-color: var(--Capuccino);
     color: var(--CinzaAnemico);
     padding: 40px; 
-    border: 3px solid;
-    border-radius: var(--RadiusUniversal);
-    width: 90%;
-    margin: 0 auto;
-    box-sizing: border-box;
-    
-    /* ADICIONE ESTAS LINHAS: */
-    height: auto !important;  /* Remove a altura fixa de 100vh */
     min-height: 100vh;
 }
 
-/* ESTILOS PARA BLOCOS DE INGREDIENTES E MODO DE PREPARO */
 #ingredientes, #mododepreparo {
-    box-sizing: border-box; 
-    padding: 20px; 
-    border: 3px solid var(--CinzaAnemico);
-    
-    /* AUMENTADO: Margem inferior grande no último bloco para empurrar o fundo do #preparo */
+    padding: 20px 20px 20px 50px; 
+    border: var(--BordaClara);
     margin-bottom: 40px; 
-    
     border-radius: var(--RadiusUniversal);
-    
-    /* ESSENCIAL: Adiciona espaço para os marcadores de lista não serem cortados */
-    padding-left: 50px; 
 }
 
-/* Estilização dos títulos internos dos detalhes */
 #ingredientes h3, #mododepreparo h3 {
     color: var(--AmareloSol);
     font-size: var(--H2);
-    border-bottom: 2px solid var(--AmareloSol); /* Linha sutil para separar */
+    border-bottom: 2px solid var(--AmareloSol); 
     padding-bottom: 5px;
     margin-bottom: 15px;
 }
 
-/* Estilos para garantir que listas UL/OL respeitem o espaçamento */
 #ingredientes ul, #mododepreparo ol {
-    /* Removido o background: Capuccino dos <li> para simplificar e melhorar o design */
-    list-style-type: disc; /* Usar bolinha para ingrediente */
+    list-style-type: disc; 
     list-style-position: outside;
-    padding-left: 0;
     margin: 10px 0;
+    padding-left: 20px
 }
 
 #mododepreparo ol {
-    list-style-type: decimal; /* Usar números para modo de preparo */
+    list-style-type: decimal; 
 }
 
-/* Garante que a imagem se ajuste ao contêiner de detalhes */
 #detalhe-receita img {
-    max-width: 100%;
+    width: 100%;
     height: auto; 
-    display: block;
     margin-bottom: 20px; 
     border-radius: var(--RadiusUniversal);
 }
 
 #detalhe-receita {
     width: 100%;
-    box-sizing: border-box;
 }
 
 .info-imagem {
     width: 100%;
     margin-bottom: 20px;
-    box-sizing: border-box;
 }
 
 .info-imagem img {
     width: 100% !important;
-    max-width: 100%;
     height: auto;
     max-height: 400px;
     object-fit: cover;
     border-radius: var(--RadiusUniversal);
-    display: block;
+    border: var(--BordaClara);
     margin-bottom: 20px;
 }
 
-/* Garante que o parágrafo de categoria/país também respeite o container */
 .info-imagem p {
     margin: 0;
     padding: 0 5px;
 }
 
 /* --- ESTILOS PARA INTEGRAÇÃO DA API --- */
-
-/* Container da Lista de Receitas por Ingrediente */
 #lista-ingrediente {
     display: flex;
     flex-wrap: wrap;
@@ -436,7 +389,6 @@ section {
     margin-top: 30px;
 }
 
-/* Card Individual de Receita (Busca por Ingrediente) */
 .card-ingrediente {
     width: 200px; 
     background-color: var(--Capuccino);
@@ -472,7 +424,6 @@ section {
     justify-content: center;
 }
 
-/* Ajuste do Título da Seção 'preparo' após a busca */
 #preparo h2 {
     text-align: center;
     color: var(--AmareloSol);
@@ -480,25 +431,12 @@ section {
     margin-bottom: 20px;
 }
 
-
+/* --- MOBILE --- */
 @media (max-width: 768px) {
     section {
         flex-direction: column;
-        height: auto;
-        padding: 20px; 
     }
 
-    #bloco-de-titulo {
-        margin: var(--MarginUniversal);
-    }
-
-    #menu {
-        height: 100vh;
-    }
-
-    #bem-vindo img {
-        margin: var(--MarginUniversal) auto;
-    }
     header {
         background-attachment: scroll;
     }
@@ -507,24 +445,11 @@ section {
         flex-basis: 100%; 
     }
 
-    #contato {
-        flex-direction: column; 
-        gap: 20px;
-        padding: 20px;
-    }
-
     #contato img {
         max-width: 80%;       
         margin: 0 auto;     
+        padding: var(--PaddingUniversal);
     } 
-
-    #preparo {
-        padding: 20px; 
-    }
-    
-    #ingredientes, #mododepreparo {
-        margin-bottom: 20px; /* Reduz a margem no mobile */
-    }
 
     #receita {
         display: flex;
@@ -534,7 +459,6 @@ section {
     }
 
     #blocoreceita {
-        position: static;
         font-size: var(--H2);
         text-align: center;
         margin-bottom: var(--MarginUniversal);
@@ -548,15 +472,7 @@ section {
         margin-bottom: 10px;
     }
 
-    .ing {
-        position: static;
-        font-size: var(--H2);
-        text-align: center;
-        margin-bottom: var(--MarginUniversal);
-    }
-
     #mododepreparo {
-        position: static;
         border: var(--CinzaAnemico) 3px solid;
         margin-top: var(--MarginUniversal);
     }
@@ -565,16 +481,12 @@ section {
         padding: 10px 0;
     }
     
-    #blocomenu ol {
+    nav ol {
         gap: 15px;
         font-size: 0.9rem;
     }
     
     #menu a {
         font-size: 0.9rem;
-    }
-    
-    body {
-        padding-top: 60px;
     }
 }

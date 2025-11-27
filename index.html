@@ -4,11 +4,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
     <title>Quebrando o Gelo (E o ovo)</title>
 </head>
 
 <body>
-    <header>
+    <header id="pagina-inicial">
         <div id="bloco-de-titulo">
             <img src="imagens/ovo.png" alt="ovo" class="ovo">
             <h1>Quebrando o Gelo <br><span class="destaque">(E o ovo)</span></h1>
@@ -50,21 +54,21 @@
     </section>
 
     <section id="menu">
-        <div id="blocomenu">
+        <nav>
             <ol>
-                <li><a href="#paginainicial">Página Inicial</a></li>
+                <li><a href="#pagina-inicial">Página Inicial</a></li>
                 <li><a href="#bem-vindo">Apresentação</a></li>
                 <li><a href="#contato">Contato</a></li>
                 <li><a href="#busca-receita">Buscar por Receitas</a></li>
                 <li><a href="#preparo">Buscar por Ingredientes</a></li>
             </ol>
-        </div>
+        </nav>
     </section>
 
     <section id="busca-receita">
         <div class="coluna-esquerda">
             <div id="blocoreceita">
-                <form method="get" class="botao">
+                <form method="get">
                     <p>
                         <label for="receita">Receita: </label>
                         <input type="text" id="receita" required placeholder="Digite sua Receita">                         
@@ -87,44 +91,28 @@
 
     <section id="preparo">
         <h2 id="titulo-receita">Baião de Dois</h2>
-                <form method="get" class="botao ing">
-                    <p>
-                        <label for="Ingredientes">Ingredientes:</label>
-                        <input type="text" id="Ingredientes" required placeholder="Digite seus Ingredientes"> 
-                        <input type="submit" value="Enviar">
-                        <input type="reset" value="Limpar">
-                    </p>
-                </form>
+            <form method="get">
+                <p>
+                    <label for="Ingredientes">Ingredientes:</label>
+                    <input type="text" id="Ingredientes" required placeholder="Digite seus Ingredientes"> 
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </p>
+            </form>
         <div id="ingredientes">
             <h3>Ingredientes</h3>
             <ul>
-                <li>1 xícara (chá) de arroz</li>
-                <li>1 xícara (chá) de feijão verde ou feijão-de-corda</li>
-                <li>200 g de carne seca dessalgada e desfiada</li>
-                <li>1/2 cebola picada</li>
-                <li>2 dentes de alho picados</li>
-                <li>1/2 pimentão vermelho picado</li>
-                <li>1 tomate picado</li>
-                <li>Sal a gosto</li>
-                <li>Pimenta-do-reino a gosto</li>
-                <li>Cheiro-verde picado a gosto</li>
-                <li>Óleo para refogar</li>
+                <li>Seus ingredientes aqui</li>
             </ul>
         </div>
         <div id="mododepreparo">
             <h3>Modo de Preparo</h3>
             <ol>
-                <li>Cozinhe o feijão verde em água e sal até ficar macio, mas sem desmanchar. Escorra e reserve.</li>
-                <li>Cozinhe o arroz em água e sal até ficar macio. Escorra e reserve.</li>
-                <li>Em uma panela grande, aqueça o óleo e refogue a cebola e o alho até dourarem.</li>
-                <li>Adicione o pimentão, o tomate e a carne seca desfiada. Refogue por alguns minutos.</li>
-                <li>Acrescente o feijão cozido e o arroz cozido à panela. Misture bem.</li>
-                <li>Tempere com sal, pimenta-do-reino e cheiro-verde a gosto. Misture novamente.</li>
-                <li>Cozinhe por mais alguns minutos, mexendo ocasionalmente, para que os sabores se incorporem.</li>
-                <li>Sirva quente, acompanhado de farinha de mandioca ou salada verde, se desejar.</li>
+                <li>Seu modo de preparo aqui</li>
             </ol>
         </div>
     </section>
+
     <script src="script.js"></script>
 </body>
 </html>
