@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital,wght@0,400;1,400&display=swap');
 
 * {
     margin: 0;
@@ -121,32 +121,18 @@ img {
     margin-bottom: var(--MarginUniversal);
 }
 
-.coluna-esquerda {
-    flex-basis: 50%;
-}
-
-.coluna-direita {
-    flex-basis: 50%; 
-}
-
 /* Estilos para a seção de Contato */
-#contato .coluna-esquerda,
-#contato .coluna-direita {
-    flex-basis: 45%;          
-    text-align: center;
-}
-
 #contato {
     display: flex;
     flex-wrap: wrap;
-    padding: var(--PaddingUniversal);
+    text-align: center;
     background-color: var(--Capuccino);
 }
 
 #contato img {
     width: 100%;
     height: auto;
-    max-height: 400px;        
+    max-height: 500px;        
     object-fit: contain;  
 }
 
@@ -308,28 +294,38 @@ textarea::placeholder {
     opacity: 1;           
 }
 
+/*--- SECTION DE PREPARO ---*/
+#preparo {
+    background-color: var(--Capuccino);
+    text-align: center;
+    color: var(--CinzaAnemico);
+    min-height: 100vh;
+}
+
 #titulo-receita {
     color: var(--AmareloSol); 
     font-size: var(--H2);
     text-align: center; 
-    margin-bottom: 30px;
+    margin: var(--MarginUniversal);
 }
 
-#preparo {
-    background-color: var(--Capuccino);
-    color: var(--CinzaAnemico);
-    padding: 40px; 
-    min-height: 100vh;
+#preparo h2 {
+    text-align: center;
+    color: var(--AmareloSol);
+    font-size: var(--H1);
+    margin-bottom: 20px;
 }
 
-#ingredientes, #mododepreparo {
-    padding: 20px 20px 20px 50px; 
+/* Estilos para as caixas de ingredientes e modo de preparo */
+#ingredientes, #modo-de-preparo {
+    max-width: 1000px;
+    padding: 20px; 
     border: var(--BordaClara);
-    margin-bottom: 40px; 
+    margin: 40px; 
     border-radius: var(--RadiusUniversal);
 }
 
-#ingredientes h3, #mododepreparo h3 {
+#ingredientes h3, #modo-de-preparo h3 {
     color: var(--AmareloSol);
     font-size: var(--H2);
     border-bottom: 2px solid var(--AmareloSol); 
@@ -337,49 +333,38 @@ textarea::placeholder {
     margin-bottom: 15px;
 }
 
-#ingredientes ul, #mododepreparo ol {
+#ingredientes ul, #modo-de-preparo ol {
     list-style-type: disc; 
-    list-style-position: outside;
     margin: 10px 0;
     padding-left: 20px
 }
 
-#mododepreparo ol {
+#modo-de-preparo ol {
     list-style-type: decimal; 
 }
 
-#detalhe-receita img {
-    width: 100%;
-    height: auto; 
-    margin-bottom: 20px; 
+#info-receita img {
+    margin: 20px; 
     border-radius: var(--RadiusUniversal);
 }
 
-#detalhe-receita {
-    width: 100%;
-}
-
 .info-imagem {
-    width: 100%;
-    margin-bottom: 20px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .info-imagem img {
-    width: 100% !important;
     height: auto;
     max-height: 400px;
     object-fit: cover;
     border-radius: var(--RadiusUniversal);
     border: var(--BordaClara);
-    margin-bottom: 20px;
 }
 
 .info-imagem p {
-    margin: 0;
     padding: 0 5px;
 }
 
-/* --- ESTILOS PARA INTEGRAÇÃO DA API --- */
 #lista-ingrediente {
     display: flex;
     flex-wrap: wrap;
@@ -387,6 +372,11 @@ textarea::placeholder {
     gap: 20px;
     padding: 20px 0;
     margin-top: 30px;
+}
+
+#info-receita {
+    background-color: var(--Capuccino);
+    margin: auto;
 }
 
 .card-ingrediente {
@@ -424,12 +414,6 @@ textarea::placeholder {
     justify-content: center;
 }
 
-#preparo h2 {
-    text-align: center;
-    color: var(--AmareloSol);
-    font-size: var(--H1);
-    margin-bottom: 20px;
-}
 
 /* --- MOBILE --- */
 @media (max-width: 768px) {
@@ -439,10 +423,6 @@ textarea::placeholder {
 
     header {
         background-attachment: scroll;
-    }
-
-    .coluna-esquerda, .coluna-direita {
-        flex-basis: 100%; 
     }
 
     #contato img {
@@ -472,7 +452,7 @@ textarea::placeholder {
         margin-bottom: 10px;
     }
 
-    #mododepreparo {
+    #modo-de-preparo {
         border: var(--CinzaAnemico) 3px solid;
         margin-top: var(--MarginUniversal);
     }

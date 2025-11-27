@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         containerDetalhes.innerHTML = `
-            <div id="detalhe-receita">
+            <div id="info-receita">
                 <h2 id="titulo-receita">${receita.strMeal}</h2>
                 <div class="info-imagem">
                     <img src="${receita.strMealThumb}" alt="Imagem da Receita: ${receita.strMeal}" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </ul>
                 </div>
                 
-                <div id="mododepreparo">
+                <div id="modo-de-preparo">
                     <h3>Modo de Preparo</h3>
                     <ol>
                         ${instrucoes.map(passo => `<li>${passo}</li>`).join('')}
@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             
             card.addEventListener('click', () => {
-                 buscarDetalhesReceita(receita.idMeal);
+                buscarDetalhesReceita(receita.idMeal);
             });
 
             listaContainer.appendChild(card);
