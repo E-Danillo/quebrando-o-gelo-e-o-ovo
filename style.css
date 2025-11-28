@@ -425,8 +425,19 @@ textarea::placeholder {
         padding: 20px 0;
     }
 
+    nav {
+        border: none;
+    }
+
     nav ol {
         gap: 30px;
+    }
+
+    nav li {
+        margin-bottom: 10px;
+        font-size: 0.9rem; 
+        border-bottom: 2px solid var(--AmareloSol);
+
     }
 
     #bloco-de-titulo {
