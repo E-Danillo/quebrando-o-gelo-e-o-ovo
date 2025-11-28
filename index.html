@@ -78,7 +78,22 @@
                         <input type="reset" value="Limpar">
                     </p>
                 </form>
-                <p style="text-align: center; color: var(--AmareloSol); font-size: 1rem;">Use a busca acima para encontrar a receita perfeita!</p>
+
+                <p style="text-align: center; color: var(--AmareloSol); font-size: 1rem; margin: 5px;"> Que tal buscar uma receita pelo nome?
+                </p>
+
+                <!-- Formulário de busca por ingrediente -->
+                <form method="get">
+                    <p>
+                        <label for="Ingredientes">Ingredientes:</label>
+                        <input type="text" id="Ingredientes" required placeholder="Digite seus Ingredientes"> 
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Limpar">
+                    </p>
+                </form>
+
+                <p style="text-align: center; color: var(--AmareloSol); font-size: 1rem; margin: 5px;"> Ou buscar uma receita pelos ingredientes que você tem?
+                </p>
             </div>    
         </div>
         <div class="coluna-direita">
@@ -91,16 +106,10 @@
         </div>
     </section>
 
+
     <section id="preparo">
         <h2 id="titulo-receita">Nome da Receita</h2>
-            <form method="get">
-                <p>
-                    <label for="Ingredientes">Ingredientes:</label>
-                    <input type="text" id="Ingredientes" required placeholder="Digite seus Ingredientes"> 
-                    <input type="submit" value="Enviar">
-                    <input type="reset" value="Limpar">
-                </p>
-            </form>
+
         <div id="ingredientes">
             <h3>Ingredientes</h3>
             <ul>
