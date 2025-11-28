@@ -187,7 +187,7 @@ nav {
     max-width: 1000px;
     margin: 0 auto; 
     padding: var(--PaddingUniversal);
-    border: var(--BordaClara);
+    border: 2px solid rgb(63, 47, 10);
     border-radius: var(--RadiusPrincipal);
     background-color: var(--Capuccino);
 }
@@ -274,7 +274,7 @@ nav ol {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: var(--RadiusUniversal);
-    border: var(--BordaClara);
+
 }
 
 input, textarea {
@@ -358,7 +358,6 @@ textarea::placeholder {
     max-height: 400px;
     object-fit: cover;
     border-radius: var(--RadiusUniversal);
-    border: var(--BordaClara);
 }
 
 .info-imagem p {
@@ -455,7 +454,7 @@ textarea::placeholder {
 
     #btn-mobile {
     font-size: 2rem;
-    border: var(--BordaClara);
+    border: 2px solid rgb(63, 47, 10);
     border-radius: 10px;
     background-color: var(--Capuccino);
     color: var(--AmareloSol);
