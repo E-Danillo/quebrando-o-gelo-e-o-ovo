@@ -18,7 +18,7 @@ html {
     --BordaClara: 3px solid var(--CinzaAnemico);
     --BordaEscura: 3px solid var(--Capuccino);
 
-    --MarginUniversal: 10px;
+    --MarginUniversal: 20px;
     --PaddingUniversal: 30px;
     --RadiusUniversal: 10px;
     --RadiusPrincipal: 45px;
@@ -104,7 +104,7 @@ img {
     height: auto;
     max-height: 400px;        
     object-fit: contain;  
-    margin: var(--MarginUniversal);
+    margin: var(--MarginUniversal) auto;
 }
 
 #apresentacao {
@@ -134,6 +134,7 @@ img {
     height: auto;
     max-height: 500px;        
     object-fit: contain;  
+    margin: var(--MarginUniversal) auto;
 }
 
 #contato h2 {
@@ -414,59 +415,72 @@ textarea::placeholder {
     justify-content: center;
 }
 
+#btn-mobile {
+    display: none;
+}
 
-/* --- MOBILE --- */
+/* Estilos responsivos */
 @media (max-width: 768px) {
     section {
         flex-direction: column;
+        height: auto; 
+        padding: 20px 0;
     }
 
-    header {
-        background-attachment: scroll;
+    nav ol {
+        gap: 30px;
     }
 
-    #contato img {
-        max-width: 80%;       
-        margin: 0 auto;     
-        padding: var(--PaddingUniversal);
-    } 
-
-    #receita {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap; 
+    #bloco-de-titulo {
+        margin: var(--MarginUniversal);
+    }
+    
+    #info-receita img {
+        margin: auto;
+        margin-bottom: auto;
+        border-radius: var(--RadiusUniversal);
     }
 
-    #blocoreceita {
-        font-size: var(--H2);
-        text-align: center;
-        margin-bottom: var(--MarginUniversal);
-        max-height: none; 
-        overflow-y: visible; 
+    .galeria {
+        width: 90%;
     }
 
-    #titulo-receita {
-        position: relative;
-        text-align: center;
-        margin-bottom: 10px;
+    #lista-ingrediente {
+        flex-direction: column;
+        align-items: center; 
     }
 
-    #modo-de-preparo {
-        border: var(--CinzaAnemico) 3px solid;
-        margin-top: var(--MarginUniversal);
+    #btn-mobile {
+    font-size: 2rem;
+    border: var(--BordaClara);
+    border-radius: 10px;
+    background-color: var(--Capuccino);
+    color: var(--AmareloSol);
+    padding: 4px 12px;
+    cursor: pointer;
+    display: block; 
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2000;
     }
 
     #menu {
-        padding: 10px 0;
+        padding: 0;
     }
-    
-    nav ol {
-        gap: 15px;
-        font-size: 0.9rem;
+    #menu nav {
+        display: none; 
+        width: 100%;
     }
-    
-    #menu a {
-        font-size: 0.9rem;
+
+    #menu nav.show {
+        display: block; 
     }
+
+    #menu ol {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
 }

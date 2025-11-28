@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    // Menu para mobile
+    const btn = document.getElementById('btn-mobile');
+    const nav = document.querySelector('#menu nav');
+    btn.addEventListener('click', () => {
+        nav.classList.toggle('show');
+    });
+
     
     // URLs base da API TheMealDB
     const THEMEALDB_URL_SEARCH_NAME = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
