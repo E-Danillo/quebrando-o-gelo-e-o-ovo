@@ -15,8 +15,8 @@ html {
     --Capuccino: #5E3D19;
     --CinzaAnemico: #EDEDED;
     
-    --BordaClara: 3px solid var(--CinzaAnemico);
-    --BordaEscura: 3px solid var(--Capuccino);
+    --BordaClara: 2px solid var(--CinzaAnemico);
+    --BordaEscura: 2px solid var(--Capuccino);
 
     --MarginUniversal: 20px;
     --PaddingUniversal: 30px;
@@ -432,6 +432,10 @@ textarea::placeholder {
 
     #bloco-de-titulo {
         margin: var(--MarginUniversal);
+    }
+
+    #bem-vindo img {
+        max-height: 300px;        
     }
 
     #info-receita img {
