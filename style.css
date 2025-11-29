@@ -105,6 +105,7 @@ img {
     max-height: 400px;        
     object-fit: contain;  
     margin: var(--MarginUniversal) auto;
+    padding: var(--PaddingUniversal);
 }
 
 #apresentacao {
@@ -186,8 +187,6 @@ img {
 nav {
     max-width: 1000px;
     margin: 0 auto; 
-    padding: var(--PaddingUniversal);
-    border: 2px solid rgb(63, 47, 10);
     border-radius: var(--RadiusPrincipal);
     background-color: var(--Capuccino);
 }
@@ -197,14 +196,13 @@ nav ol {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 70px;
+    gap: 100px;
     list-style-type: none;
 }
 
 #menu a {
     text-decoration: none;
     color: var(--AmareloSol);
-    transition: color 0.3s ease;
     white-space: nowrap;
     font-size: 1rem; 
     letter-spacing: .5px;
@@ -213,7 +211,10 @@ nav ol {
 }
 
 #menu a:hover {
-    color: var(--CinzaAnemico);
+    color: var(--Capuccino);
+    background-color: var(--CinzaAnemico);
+    border-radius: var(--RadiusUniversal);
+    padding: 5px 10px;
 }
 
 #blocoreceita {
@@ -224,10 +225,9 @@ nav ol {
     max-width: 700px;
     /* Padrão de rolagem */
     padding: 10px;
-    margin: auto;
+    margin: 20px;
     text-align: center;
-    max-height: 425px; 
-    overflow-y: auto;  
+    max-height: 450px; 
 }
 
 #blocoreceita h3 {
@@ -278,7 +278,7 @@ nav ol {
 }
 
 input, textarea {
-    background-color: rgb(252, 228, 174);
+    background-color: rgb(241, 251, 218);
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -288,6 +288,16 @@ input, textarea {
     transition: 0.3s;
 }
 
+input[type="submit"] {
+    font-weight: bold;
+    color: rgb(59, 154, 15);
+}
+
+input[type="reset"] {
+    font-weight: bold;
+    color: rgb(112, 14, 14);
+}
+
 input::placeholder,
 textarea::placeholder {
     font-size: 19px;      
@@ -295,7 +305,7 @@ textarea::placeholder {
 }
 
 /*--- SECTION DE PREPARO ---*/
-#preparo {
+#sua-receita {
     background-color: var(--Capuccino);
     text-align: center;
     color: var(--CinzaAnemico);

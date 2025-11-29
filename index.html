@@ -59,41 +59,38 @@
         <nav>
             <ol>
                 <li><a href="#pagina-inicial">Página Inicial</a></li>
-                <li><a href="#bem-vindo">Apresentação</a></li>
+                <li><a href="#bem-vindo">Boas-Vindas</a></li>
                 <li><a href="#contato">Contato</a></li>
-                <li><a href="#busca-receita">Buscar por Receitas</a></li>
-                <li><a href="#preparo">Buscar por Ingredientes</a></li>
+                <li><a href="#buscar">Buscar</a></li>
+                <li><a href="#sua-receita">Sua Receita</a></li>
             </ol>
         </nav>
     </section>
 
-    <section id="busca-receita">
+    <section id="buscar">
         <div class="coluna-esquerda">
             <div id="blocoreceita">
-                <form method="get">
+                <form method="get" autocomplete="off">
                     <p>
                         <label for="receita">Receita: </label>
+                        <p style="text-align: center; color: var(--AmareloSol); font-size: 1rem; margin: 5px;"> Que tal buscar uma receita pelo nome?
+                        </p>
                         <input type="text" id="receita" required placeholder="Digite sua Receita">                         
                         <input type="submit" value="Enviar">
                         <input type="reset" value="Limpar">
                     </p>
                 </form>
 
-                <p style="text-align: center; color: var(--AmareloSol); font-size: 1rem; margin: 5px;"> Que tal buscar uma receita pelo nome?
-                </p>
-
-                <!-- Formulário de busca por ingrediente -->
-                <form method="get">
+                <form method="get" autocomplete="off">
                     <p>
-                        <label for="Ingredientes">Ingredientes:</label>
+                        <label for="Ingredientes">Ingredientes:</label>                        
+                        <p style="text-align: center; color: var(--AmareloSol); font-size: 1rem; margin: 5px;"> Ou buscar uma receita pelos ingredientes que você tem?
+                        </p>
                         <input type="text" id="Ingredientes" required placeholder="Digite seus Ingredientes"> 
                         <input type="submit" value="Enviar">
                         <input type="reset" value="Limpar">
                     </p>
                 </form>
-
-                <p style="text-align: center; color: var(--AmareloSol); font-size: 1rem; margin: 5px;"> Ou buscar uma receita pelos ingredientes que você tem?
-                </p>
             </div>    
         </div>
         <div class="coluna-direita">
@@ -106,20 +103,19 @@
         </div>
     </section>
 
-
-    <section id="preparo">
-        <h2 id="titulo-receita">Nome da Receita</h2>
+    <section id="sua-receita">
+        <h2 id="titulo-receita">O nome da sua receita aparecerá aqui.</h2>
 
         <div id="ingredientes">
             <h3>Ingredientes</h3>
             <ul>
-                <li>Seus ingredientes aqui</li>
+                <li>Seus ingredientes aparecerão aqui</li>
             </ul>
         </div>
         <div id="modo-de-preparo">
             <h3>Modo de Preparo</h3>
             <ol>
-                <li>Seu modo de preparo aqui</li>
+                <li>Seu modo de preparo aparecerá aqui</li>
             </ol>
         </div>
     </section>

@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const THEMEALDB_URL_SEARCH_INGREDIENT = 'https://www.themealdb.com/api/json/v1/1/filter.php?i=';
 
     // --- 1. Busca por NOME ---
-    const formBuscaReceita = document.querySelector('#busca-receita form:nth-of-type(1)'); 
+    const formBuscaReceita = document.querySelector('#buscar form:nth-of-type(1)'); 
     const inputReceitaNome = document.getElementById('receita');
     const containerExemplosReceita = document.querySelector('#blocoreceita');
 
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- 2. Detalhes da Receita ---
-    const containerDetalhes = document.getElementById('preparo');
+    const containerDetalhes = document.getElementById('sua-receita');
 
     function anexarListenerDetalheReceita() {
         const links = document.querySelectorAll('.link-receita-detalhe');
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- 3. Busca por INGREDIENTE ---
-    const formBuscaIngrediente = document.querySelector('#busca-receita form:nth-of-type(2)');
+    const formBuscaIngrediente = document.querySelector('#buscar form:nth-of-type(2)');
     const inputIngredientes = document.getElementById('Ingredientes');
 
     formBuscaIngrediente.addEventListener('submit', function(event) {
