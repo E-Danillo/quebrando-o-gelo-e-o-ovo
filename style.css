@@ -227,7 +227,10 @@ nav ol {
     padding: 10px;
     margin: 20px;
     text-align: center;
-    max-height: 450px; 
+}
+
+#blocoreceita p {
+    margin-top: 10px;
 }
 
 #blocoreceita h3 {
@@ -265,7 +268,7 @@ nav ol {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    max-width: 600px;
+    max-width: 450px;
     margin: 20px;       
 }
 
@@ -303,7 +306,6 @@ textarea::placeholder {
     font-size: 19px;      
     opacity: 1;           
 }
-
 /*--- SECTION DE PREPARO ---*/
 #sua-receita {
     background-color: var(--Capuccino);
@@ -446,8 +448,6 @@ textarea::placeholder {
     nav li {
         margin-bottom: 10px;
         font-size: 0.9rem; 
-        border-bottom: 2px solid var(--AmareloSol);
-
     }
 
     #bloco-de-titulo {
@@ -455,7 +455,16 @@ textarea::placeholder {
     }
 
     #bem-vindo img {
-        max-height: 300px;        
+        max-height: 400px;        
+    }
+
+    .redes {
+        gap: 40px;
+    }
+
+    #contato img {
+        max-height: 400px;      
+        padding: 20px;
     }
 
     #info-receita img {
@@ -465,7 +474,7 @@ textarea::placeholder {
     }
 
     .galeria {
-        width: 90%;
+    max-width: 410px;
     }
 
     #lista-ingrediente {
@@ -474,23 +483,24 @@ textarea::placeholder {
     }
 
     #btn-mobile {
-    font-size: 2rem;
-    border: 2px solid rgb(63, 47, 10);
-    border-radius: 10px;
-    background-color: var(--Capuccino);
-    color: var(--AmareloSol);
-    padding: 4px 12px;
-    cursor: pointer;
-    display: block; 
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 2000;
+        font-size: 2rem;
+        border: 1px solid var(--AmareloSol);
+        border-radius: 10px;
+        background-color: var(--Capuccino);
+        color: var(--AmareloSol);
+        padding: 4px 12px;
+        cursor: pointer;
+        display: block; 
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 2000;
     }
 
     #menu {
         padding: 0;
     }
+
     #menu nav {
         display: none; 
         width: 100%;
