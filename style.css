@@ -130,6 +130,10 @@ img {
     background-color: var(--Capuccino);
 }
 
+#contato-info {
+    margin: var(--MarginUniversal);
+}
+
 #contato img {
     width: 100%;
     height: auto;
@@ -264,6 +268,16 @@ nav ol {
     font-weight: bold;
 }
 
+#lista-resultados-busca-nome {
+    list-style: none;
+}
+
+#info-receita, 
+#sua-receita {
+    width: 100%;
+    background: none; 
+}
+
 .galeria {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -333,7 +347,7 @@ textarea::placeholder {
     max-width: 1000px;
     padding: 20px; 
     border: var(--BordaClara);
-    margin: 40px; 
+    margin: 20px auto;
     border-radius: var(--RadiusUniversal);
 }
 
@@ -514,6 +528,10 @@ textarea::placeholder {
         flex-direction: column;
         gap: 20px;
         text-align: center;
+    }
+
+    #ingredientes, #modo-de-preparo {
+        margin: 20px;
     }
 
 }

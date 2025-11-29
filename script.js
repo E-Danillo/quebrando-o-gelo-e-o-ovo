@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div id="info-receita">
                 <h2 id="titulo-receita">${receita.strMeal}</h2>
                 <div class="info-imagem">
-                    <img src="${receita.strMealThumb}" alt="Imagem da Receita: ${receita.strMeal}" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
+                    <img src="${receita.strMealThumb}" alt="Imagem da Receita: ${receita.strMeal}" style="width: 100%; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
                     <p style="color: var(--AmareloSol); text-align: right; font-size: 1rem;">Categoria: ${receita.strCategory || 'N/A'} | País: ${receita.strArea || 'N/A'}</p>
                 </div>
                 
